@@ -4,12 +4,17 @@
     margin: 26px 5% 0 5%;
 }
 
-.week {
+.week h1 {
+    margin: 5px 0 5px 0;
+    text-align: center;
+}
+
+.week-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
 
     background-color: var(--color-heavy);
     border-radius: 5px;
-    margin: 9px 3px 0px 3px;
+    margin: 3px 3px 0px 3px;
 }

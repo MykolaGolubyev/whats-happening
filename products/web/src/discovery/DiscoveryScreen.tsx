@@ -33,7 +33,7 @@ export class DiscoveryScreen extends React.Component<Props, State> {
     return (
       <div className="discovery-screen">
         <NavigationPanel onFilterChange={this.onFilterChange} navigationFilter={navigationFilter}/>
-        <CorkBoard events={sampleData}/>
+        <CorkBoard allEvents={sampleData}/>
       </div>
     );
   }
