@@ -12,6 +12,7 @@ export default WHScreen = TabNavigator(
             screen: CategoriesScreen,
         },
     }, {
-        tabBarPosition: 'top'
+        tabBarPosition: 'top',
+        swipeEnabled: true
     }
 );

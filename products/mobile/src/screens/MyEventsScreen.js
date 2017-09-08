@@ -1,8 +1,13 @@
 import React, {PureComponent} from 'react';
-import {Text} from "react-native";
+import {View, Text} from "react-native";
+import styles from '../styles/WHStyle';
 
 export default class MyEventsScreen extends PureComponent {
     render() {
-        return <Text>Hello</Text>;
+        return (
+            <View style={styles.container}>
+                <Text>My Events</Text>
+            </View>
+        );
     }
 }
