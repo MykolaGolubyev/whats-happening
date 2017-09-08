@@ -29,10 +29,16 @@ export default styles = StyleSheet.create({
         justifyContent: 'space-between',
         margin: 5
     },
+    eventsContainer: {
+        flex: 1,
+        marginTop: 26,
+    },
     swipeout: {
         backgroundColor: '#FFF',
-        paddingTop: 10,
-        paddingLeft: 16,
+        paddingTop: 8,
+        paddingBottom: 8,
+        paddingLeft: 20,
+        paddingRight: 20,
     },
     cname: {flex: 1, fontSize: 15, fontWeight: 'bold', fontStyle: 'italic', color: '#000'},
     description: {flex: 2, textAlign: 'left', fontSize: 10, fontStyle: 'italic', color: '#000'},

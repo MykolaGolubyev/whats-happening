@@ -7,7 +7,8 @@ const swipeOutButtonsLeft = [
     {
         text:'Accept',
         backgroundColor:'green',
-        type:'default'
+        type:'default',
+        component: <Text>Accept</Text>
     }
 ];
 
@@ -15,14 +16,15 @@ const swipeOutButtonsRight = [
     {
         text:'Cancel',
         backgroundColor:'red',
-        type:'default'
+        type:'default',
+        component: <Text>Cancel</Text>
     }
 ];
 
 const Event = ({ eventName }) => {
     return (
-        <Swipeout style={styles.swipeout} left={swipeOutButtonsLeft} right={swipeOutButtonsRight}>
-            <View>
+        <Swipeout left={swipeOutButtonsLeft} right={swipeOutButtonsRight}>
+            <View style={styles.swipeout}>
                 <Text>{eventName}</Text>
             </View>
         </Swipeout>
@@ -32,11 +34,13 @@ const Event = ({ eventName }) => {
 export default class MyEventsScreen extends PureComponent {
     render() {
         return (
-            <FlatList
-                data={this.props.events}
-                renderItem={({item}) => <Event eventName={item.name}/>}
-                keyExtractor={item => item.name}
-            />
+            <View style={[styles.eventsContainer]}>
+                <FlatList
+                    data={this.props.events}
+                    renderItem={({item}) => <Event eventName={item.name}/>}
+                    keyExtractor={item => item.name}
+                />
+            </View>
         );
     }
 }
