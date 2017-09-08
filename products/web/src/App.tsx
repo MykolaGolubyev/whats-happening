@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './App.css';
-import {CategoriesPanel} from './categories/CategoriesPanel';
+import { CategoriesPanel } from './categories/CategoriesPanel';
 
 class App extends React.Component {
   render() {

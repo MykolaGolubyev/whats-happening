@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react';
 import './CategoryEntry.css';
 
 interface Props {
-    name: string
+    name: string;
 }
 
 const CategoryEntry = ({name}: Props) => {
@@ -10,7 +10,7 @@ const CategoryEntry = ({name}: Props) => {
         <div className="category-entry">
             {name}
         </div>
-    )
+    );
 };
 
-export {CategoryEntry}
+export { CategoryEntry };

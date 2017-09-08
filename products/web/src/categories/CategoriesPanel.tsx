@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './CategoriesPanel.css';
-import {CategoryEntry} from "./CategoryEntry";
+import { CategoryEntry } from './CategoryEntry';
 
 interface Props {
     names: string[];

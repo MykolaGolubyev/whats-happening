@@ -3,3 +3,11 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+:root {
+  --color-light: #59dbd5;
+  --color-medium: #43a39f;
+  --color-heavy: #055154;
+  --color-accent-1: #ffbf3b;
+  --color-accent-2: #cf0a2c;
+}

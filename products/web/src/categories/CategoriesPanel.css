@@ -1,5 +1,5 @@
 .categories-panel {
     display: flex;
-    background-color: #222222;
+    background-color: var(--color-heavy);
     color: #ccc;
 }
