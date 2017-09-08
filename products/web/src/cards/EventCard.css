@@ -1,0 +1,39 @@
+.event-card {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid var(--color-medium);
+    background-color: white;
+    border-radius: 3px;
+    max-width: 400px;
+    max-height: 300px;
+
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas:
+      "a a b"
+      "c c c"
+      "d d d";
+}
+
+.event-card .name {
+    grid-area: a;
+}
+
+.event-card .category {
+    grid-area: b;
+    text-transform: uppercase;
+    color: lightslategray;
+    text-align: right;
+
+}
+
+.event-card .date {
+    grid-area: c;
+    color: lightslategray;
+    text-align: right;
+}
+
+.event-card .description {
+    grid-area: d;
+}
