@@ -1,8 +1,11 @@
 import * as Immutable from 'immutable';
 
 class NavigationFilter {
+  public readonly searchTermLowerCase: string;
+
   constructor(public readonly selectedCategories: Immutable.Set<string>,
               public readonly searchTerm: string) {
+    this.searchTermLowerCase = searchTerm.toLowerCase();
   }
 
   public newSearchTerm(term: string): NavigationFilter {
