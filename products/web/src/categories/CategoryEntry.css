@@ -1,3 +1,8 @@
 .category-entry {
     padding: 8px;
+    cursor: pointer;
+}
+
+.category-entry:hover {
+    background-color: var(--color-medium);
 }

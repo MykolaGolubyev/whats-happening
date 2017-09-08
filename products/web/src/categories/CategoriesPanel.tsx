@@ -3,16 +3,15 @@ import './CategoriesPanel.css';
 import { CategoryEntry } from './CategoryEntry';
 
 interface Props {
-    names: string[];
-    ids: string[];
+  names: string[];
 }
 
 const CategoriesPanel = ({names}: Props) => {
-    return (
-        <div className="categories-panel">
-            {names.map(n => <CategoryEntry name={n}/>)}
-        </div>
-    );
+  return (
+    <div className="categories-panel">
+      {names.map(n => <CategoryEntry key={n} name={n}/>)}
+    </div>
+  );
 };
 
-export {CategoriesPanel};
+export { CategoriesPanel };
