@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "WhatsHappening",
+  "version": "0.0.1",
+  "dependencies": {
+  },
+  "workspaces": [
+    "products/*"
+  ]
+}
