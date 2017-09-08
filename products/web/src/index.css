@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -8,6 +14,7 @@ body {
   --color-light: #59dbd5;
   --color-medium: #43a39f;
   --color-heavy: #055154;
+  --font-color-heavy: #f2fffe;
   --color-accent-1: #ffbf3b;
   --color-accent-2: #cf0a2c;
 }

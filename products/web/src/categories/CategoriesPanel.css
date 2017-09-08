@@ -2,5 +2,5 @@
     display: flex;
     flex: 0 0 35px;
     background-color: var(--color-heavy);
-    color: #ccc;
+    color: var(--font-color-heavy);
 }
