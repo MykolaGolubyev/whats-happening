@@ -1,23 +1,12 @@
 import * as React from 'react';
 import './App.css';
-import {CategoriesPanel} from "./CategoriesPanel";
-
-const logo = require('./logo.svg');
+import {CategoriesPanel} from './categories/CategoriesPanel';
 
 class App extends React.Component {
   render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-          <CategoriesPanel names={["1"]} ids={["df"]}/>
-      </div>
-    );
+      return (
+          <CategoriesPanel names={['Sport', 'Games', 'ImpacTS']} ids={['df']}/>
+      );
   }
 }
 
