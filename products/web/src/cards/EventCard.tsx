@@ -2,14 +2,14 @@ import * as React from 'react';
 import './EventCard.css';
 import { distanceInWords } from 'date-fns';
 
-interface Props {
+export interface EventInfo {
     name: string;
     category: string;
     date: Date;
     description: string;
 }
 
-const EventCard = ({name, category, date, description}: Props) => (
+export const EventCard = ({name, category, date, description}: EventInfo) => (
     <div className="event-card">
         <div className="name">{name}</div>
         <div className="category">{category}</div>
@@ -17,5 +17,3 @@ const EventCard = ({name, category, date, description}: Props) => (
         <div className="description">{description}</div>
     </div>
 );
-
-export { EventCard };
