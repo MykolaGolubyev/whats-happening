@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './App.css';
-import {CategoriesPanel} from "./CategoriesPanel";
+import { CategoriesPanel } from './CategoriesPanel';
 
 const logo = require('./logo.svg');
 
@@ -15,7 +15,7 @@ class App extends React.Component {
         <p className="App-intro">
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
-          <CategoriesPanel names={["1"]} ids={["df"]}/>
+          <CategoriesPanel names={['1']} ids={['df']}/>
       </div>
     );
   }
