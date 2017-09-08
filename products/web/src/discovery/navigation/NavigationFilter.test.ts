@@ -6,9 +6,9 @@ describe('NavigationFilter', () => {
 
   it('should toggle selected categories', () => {
     const newFilter = navigationFilter.newToggledCategory('sport');
-    expect(newFilter.isCategoryEnabled('sport')).toBeTruthy();
+    expect(newFilter.isCategorySelected('sport')).toBeTruthy();
 
     const anotherNewFilter = newFilter.newToggledCategory('sport');
-    expect(anotherNewFilter.isCategoryEnabled('sport')).toBeFalsy();
+    expect(anotherNewFilter.isCategorySelected('sport')).toBeFalsy();
   });
 });

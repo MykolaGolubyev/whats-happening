@@ -9,7 +9,7 @@ class NavigationFilter {
     return new NavigationFilter(this.selectedCategories, term);
   }
 
-  public isCategoryEnabled(category: string): boolean {
+  public isCategorySelected(category: string): boolean {
     return this.selectedCategories.contains(category);
   }
 

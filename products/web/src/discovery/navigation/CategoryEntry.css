@@ -4,5 +4,8 @@
 }
 
 .category-entry:hover {
+}
+
+.category-entry.selected {
     background-color: var(--color-medium);
 }

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as Immutable from 'immutable';
 
-import { CategoriesPanel } from '../categories/CategoriesPanel';
+import { CategoriesPanel } from './CategoriesPanel';
 import { SearchPanel } from './SearchPanel';
 import { NavigationFilter } from './NavigationFilter';
 
@@ -24,14 +24,21 @@ class NavigationPanel extends React.Component<Props, State> {
   render() {
     return (
       <div className="navigation-panel">
-        <CategoriesPanel names={['Sport', 'Games', 'ImpacTS']}/>
-        <SearchPanel term={this.state.navigationFilter.searchTerm} onTermChange={this.onSearchTermChange}/>
+        <CategoriesPanel
+          names={['Sport', 'Games', 'ImpacTS']}
+          navigationFilter={this.state.navigationFilter}
+          onFilterChange={this.onFilterChange}
+        />
+        <SearchPanel
+          navigationFilter={this.state.navigationFilter}
+          onFilterChange={this.onFilterChange}
+        />
       </div>
     );
   }
 
-  onSearchTermChange = (term: string) => {
-    this.setState({navigationFilter: this.state.navigationFilter.newSearchTerm(term)});
+  onFilterChange = (navigationFilter: NavigationFilter) => {
+    this.setState({navigationFilter});
   }
 }
 
