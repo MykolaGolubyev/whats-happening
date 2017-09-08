@@ -1,13 +1,7 @@
 import * as React from 'react';
 import './EventCard.css';
 import { distanceInWords } from 'date-fns';
-
-export interface EventInfo {
-    name: string;
-    category: string;
-    date: Date;
-    description: string;
-}
+import { EventInfo } from '../events/EventInfo';
 
 export const EventCard = ({name, category, date, description}: EventInfo) => (
     <div className="event-card">
