@@ -1,20 +1,19 @@
 .cork-board {
-    margin-top: 1em;
     background-color: white;
-    margin: 26px 5% 0 5%;
+    margin: 26px 5% 0;
 }
 
-.week h1 {
+.events-group h1 {
     margin: 5px 0 5px 0;
     text-align: center;
 }
 
-.week-content {
+.events-group .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
 
     background-color: var(--color-heavy);
     border-radius: 5px;
-    margin: 3px 3px 0px 3px;
+    margin: 3px 3px 0 3px;
 }

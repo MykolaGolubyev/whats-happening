@@ -17,6 +17,12 @@ const sampleData: EventInfo[] = [
     description: 'Bike over the manhattan bridge as fast as you can, again and again.'
   },
   {
+    name: 'Bi 2',
+    category: 'Sports',
+    date: tomorrow,
+    description: 'Bike over the manhattan bridge as fast as you can, again and again.'
+  },
+  {
     name: 'Poker',
     category: 'Gaming',
     date: tomorrow,

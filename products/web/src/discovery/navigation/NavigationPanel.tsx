@@ -10,7 +10,7 @@ const NavigationPanel = ({onFilterChange, navigationFilter}: NavigationFilterCal
   return (
     <div className="navigation-panel">
       <CategoriesPanel
-        names={['Sport', 'Games', 'ImpacTS']}
+        names={['Sports', 'Gaming', 'ImpacTS']}
         navigationFilter={navigationFilter}
         onFilterChange={onFilterChange}
       />

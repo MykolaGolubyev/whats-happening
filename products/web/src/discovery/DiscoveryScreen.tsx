@@ -8,12 +8,13 @@ import './DiscoveryScreen.css';
 import sampleData from '../test-data/testEvents';
 import { CalendarEvents } from '../events/CalendarEvents';
 import { NavigationFilter } from './navigation/NavigationFilter';
+import { RealTimeDateProvider } from '../events/RealTimeDateProvider';
 
 interface Props {
 }
 
 interface State {
-  events: CalendarEvents;
+  allEvents: CalendarEvents;
   navigationFilter: NavigationFilter;
 }
 
@@ -22,23 +23,23 @@ export class DiscoveryScreen extends React.Component<Props, State> {
     super(props);
 
     this.state = {
-      events: new CalendarEvents(sampleData),
+      allEvents: new CalendarEvents(sampleData, new RealTimeDateProvider()),
       navigationFilter: new NavigationFilter(Immutable.Set.of(), '')
     };
   }
 
   render() {
-    const {navigationFilter} = this.state;
+    const {allEvents, navigationFilter} = this.state;
 
     return (
       <div className="discovery-screen">
         <NavigationPanel onFilterChange={this.onFilterChange} navigationFilter={navigationFilter}/>
-        <CorkBoard allEvents={sampleData}/>
+        <CorkBoard events={allEvents.filter(navigationFilter)}/>
       </div>
     );
   }
 
   onFilterChange = (navigationFilter: NavigationFilter) => {
-    this.setState({navigationFilter});
+    this.setState({navigationFilter: navigationFilter});
   }
 }

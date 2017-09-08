@@ -16,6 +16,10 @@ class NavigationFilter {
     return this.selectedCategories.contains(category);
   }
 
+  public isAnyCategorySelected() {
+    return ! this.selectedCategories.isEmpty();
+  }
+
   public newToggledCategory(category: string): NavigationFilter {
     const newCategories = this.selectedCategories.contains(category) ?
       this.selectedCategories.remove(category) :
