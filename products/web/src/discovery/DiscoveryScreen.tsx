@@ -28,6 +28,18 @@ const sampleData: EventInfo[] = [
     description: 'Bike over the manhattan bridge as fast as you can, again and again.'
   },
   {
+    name: 'Poker',
+    category: 'Gaming',
+    date: tomorrow,
+    description: 'Play various poker games, including 52-card pick up.'
+  },
+  {
+    name: 'Open Source Hack Night',
+    category: 'Programming',
+    date: tomorrow,
+    description: 'Work on whats-happening.'
+  },
+  {
     name: 'Magic the Gathering Draft',
     category: 'Gaming',
     date: aWeekFromNow,
