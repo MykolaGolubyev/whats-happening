@@ -7,14 +7,20 @@ export default styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
     },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
+    categoriesContainer: {
+        flexDirection: 'column'
     },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
+    categoriesRow: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 5
+    },
+    categoryCard: {
+        borderRadius: 8,
+        borderColor: '#c0c0c0',
+        borderWidth: 1,
+        height: 100
     },
 });
