@@ -12,6 +12,7 @@ interface State {
 }
 
 const tomorrow = new Date(2017, 8, 9);
+const aWeekFromNow = new Date(2017, 8, 9 + 7);
 
 const sampleData: EventInfo[] = [
   {
@@ -25,6 +26,12 @@ const sampleData: EventInfo[] = [
     category: 'Sports',
     date: tomorrow,
     description: 'Bike over the manhattan bridge as fast as you can, again and again.'
+  },
+  {
+    name: 'Magic the Gathering Draft',
+    category: 'Gaming',
+    date: aWeekFromNow,
+    description: 'Build a deck out of booster packs and try to win the tournmanet.'
   },
 ];
 

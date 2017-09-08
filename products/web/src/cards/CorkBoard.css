@@ -1,3 +1,11 @@
 .cork-board {
+    margin-top: 1em;
+    background-color: white;
+}
+
+.week {
     display: flex;
+    background-color: var(--color-heavy);
+    border-radius: 5px;
+    margin: 3px;
 }
