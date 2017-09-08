@@ -23,4 +23,13 @@ export default styles = StyleSheet.create({
         borderWidth: 1,
         height: 100
     },
+    categoryDescription: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        margin: 5
+    },
+    cname: {flex: 1, fontSize: 15, fontWeight: 'bold', fontStyle: 'italic', color: '#000'},
+    description: {flex: 2, textAlign: 'left', fontSize: 10, fontStyle: 'italic', color: '#000'},
+    subcount: {flex: 1, textAlign: 'right', fontSize: 10, fontStyle: 'italic', color: '#00b'}
 });
