@@ -1,0 +1,6 @@
+.navigation-panel {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    max-height: 40px;
+}

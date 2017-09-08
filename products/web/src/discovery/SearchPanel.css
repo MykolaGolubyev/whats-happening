@@ -1,0 +1,13 @@
+.search-panel {
+    flex-basis: 300px;
+}
+
+.search-panel input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    margin: -1px 0 0;
+    border-bottom: 1px solid var(--color-heavy);
+    padding: 0 10px;
+}

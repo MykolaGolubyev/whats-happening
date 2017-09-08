@@ -1,6 +1,6 @@
 .categories-panel {
     display: flex;
-    flex: 0 0 35px;
+    flex: 1;
     background-color: var(--color-heavy);
     color: var(--font-color-heavy);
 }
