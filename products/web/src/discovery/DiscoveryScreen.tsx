@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { EventInfo } from '../cards/EventCard';
 import './DiscoveryScreen.css';
-import { NavigationPanel } from './NavigationPanel';
+import { NavigationPanel } from './navigation/NavigationPanel';
 import { CorkBoard } from '../cards/CorkBoard';
 
 interface Props {
