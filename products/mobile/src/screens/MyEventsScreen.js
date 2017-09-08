@@ -1,13 +1,35 @@
 import React, {PureComponent} from 'react';
-import {View, Text} from "react-native";
+import {View, Text, FlatList} from "react-native";
 import styles from '../styles/WHStyle';
+
+const Event = ({ eventName }) => {
+    return (
+        <Text>Event: {eventName}</Text>
+    );
+};
+
+const Swipeout = () => {
+    var swipeoutBtns = [
+        {
+            text: 'Button'
+        }
+    ]
+    return (
+        <Swipeout right={swipeoutBtns}>
+            <View>
+                <Text>Swipe me left</Text>
+            </View>
+        </Swipeout>
+    );
+};
 
 export default class MyEventsScreen extends PureComponent {
     render() {
         return (
-            <View style={styles.container}>
-                <Text>My Events</Text>
-            </View>
+            <FlatList
+                data={}
+                renderItem={({item}) => <Text>{item.key}</Text>}
+            />
         );
     }
 }
