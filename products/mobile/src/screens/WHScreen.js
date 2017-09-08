@@ -34,7 +34,6 @@ export default WHScreen = TabNavigator(
         },
     }, {
         tabBarPosition: 'bottom',
-        swipeEnabled: true,
         tabBarOptions: {
             showIcon: true,
             showLabel: true,
@@ -46,6 +45,7 @@ export default WHScreen = TabNavigator(
                 height: 40
             },
             pressColor: '#d5dcea'
-        }
+        },
+        swipeEnabled: false
     }
 );

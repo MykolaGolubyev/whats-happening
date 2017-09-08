@@ -28,6 +28,12 @@
       "category": "Sports",
       "date": "tomorrow",
       "description": "Bike over the manhattan bridge as fast as you can, again and again."
+    },
+    {
+      "name": "NewTS",
+      "category": "Social",
+      "date": "tomorrow",
+      "description": "Social gathering for all NewTS"
     }
   ]
 }
