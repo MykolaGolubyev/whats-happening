@@ -3,25 +3,25 @@ import {View, Text} from 'react-native';
 import styles from '../styles/WHStyle';
 
 const CategoryCard = (props) => {
+    const {name, description, subcount} = props.category;
     return (
         <View style={[styles.container, styles.categoryCard]}>
             <View style={styles.categoryDescription}>
-                <Text style={styles.cname}>{props.name}</Text>
-                <Text style={styles.subcount}>({props.subcount})</Text>
+                <Text style={styles.cname}>{name}</Text>
+                <Text style={styles.subcount}>({subcount})</Text>
             </View>
-            <Text style={styles.description}>{props.description}</Text>
+            <Text style={styles.description}>{description}</Text>
         </View>
     )
 };
 
 export default class CategoriesScreen extends PureComponent {
     render() {
+        let categoryCards = this.props.categories.map(c => <CategoryCard key={c.name} category={c}/>);
         return (
             <View style={[styles.container, styles.categoriesContainer]}>
                 <View style={styles.categoriesRow}>
-                    <CategoryCard name={'Games'} description='Games we play' subcount={10}/>
-                    <CategoryCard name={'Sports'} description='Sports we play' subcount={20}/>
-                    <CategoryCard name={'Movies'} description='Movies we watch' subcount={30}/>
+                    {categoryCards}
                 </View>
             </View>
         );

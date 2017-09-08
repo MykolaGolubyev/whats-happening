@@ -1,0 +1,33 @@
+{
+  "categories": [
+    {
+      "name": "Sports",
+      "description": "Sports we play",
+      "subcount": 342
+    },
+    {
+      "name": "Games",
+      "description": "Games we play",
+      "subcount": 2342
+    },
+    {
+      "name": "Movies",
+      "description": "Movies we watch",
+      "subcount": 1313
+    }
+  ],
+  "events": [
+    {
+      "name": "Football Practice",
+      "category": "Sports",
+      "date": "tomorrow",
+      "description": "The Two Sigma football team is going to practice penalty shots."
+    },
+    {
+      "name": "Bridge Sprints",
+      "category": "Sports",
+      "date": "tomorrow",
+      "description": "Bike over the manhattan bridge as fast as you can, again and again."
+    }
+  ]
+}
