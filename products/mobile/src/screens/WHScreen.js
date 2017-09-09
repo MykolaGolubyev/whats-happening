@@ -23,7 +23,6 @@ CategoriesWrapper.navigationOptions = {
     tabBarIcon: ({tintColor}) => <Ion name="md-planet" style={styles.actionIcon}/>
 };
 
-
 export default WHScreen = TabNavigator(
     {
         'My Events': {
@@ -36,15 +35,7 @@ export default WHScreen = TabNavigator(
         tabBarPosition: 'bottom',
         tabBarOptions: {
             showIcon: true,
-            showLabel: true,
-            iconStyle: {
-                width: 35,
-                height: 60
-            },
-            tabStyle: {
-                height: 40
-            },
-            pressColor: '#d5dcea'
+            showLabel: true
         },
         swipeEnabled: false
     }

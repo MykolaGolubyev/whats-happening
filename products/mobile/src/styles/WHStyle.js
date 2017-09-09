@@ -45,5 +45,5 @@ export default styles = StyleSheet.create({
     cname: {flex: 1, fontSize: 15, fontWeight: 'bold', fontStyle: 'italic', color: '#000'},
     description: {flex: 2, textAlign: 'left', fontSize: 10, fontStyle: 'italic', color: '#000'},
     subcount: {flex: 1, textAlign: 'right', fontSize: 10, fontStyle: 'italic', color: '#00b'},
-    actionIcon: {fontSize: 20, height: 20}
+    actionIcon: {fontSize: 26, height: 26}
 });
