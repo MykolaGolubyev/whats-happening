@@ -5,7 +5,7 @@ import styles from '../styles/WHStyle';
 const CategoryCard = (props) => {
     const {name, description, subcount} = props.category;
     return (
-        <View style={[styles.container, styles.categoryCard]}>
+        <View style={[styles.categoryCard]}>
             <View style={styles.categoryDescription}>
                 <Text style={styles.cname}>{name}</Text>
                 <Text style={styles.subcount}>({subcount})</Text>

@@ -14,7 +14,22 @@
       "name": "Movies",
       "description": "Movies we watch",
       "subcount": 1313
-    }
+    },
+    {
+      "name": "Music",
+      "description": "la la la",
+      "subcount": 342
+    },
+    {
+      "name": "Social",
+      "description": "Happy Hour",
+      "subcount": 2342
+    },
+    {
+      "name": "Code",
+      "description": "Stuff we hack on",
+      "subcount": 1313
+    },
   ],
   "events": [
     {
