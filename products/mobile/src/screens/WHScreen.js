@@ -16,14 +16,14 @@ const CategoriesWrapper = function () {
 };
 
 MyEventsWrapper.navigationOptions = {
-    tabBarIcon: ({tintColor}) => <Ion name="ios-calendar" style={styles.actionIcon}/>
+    tabBarIcon: ({tintColor}) => <Ion name="ios-calendar-outline" style={[styles.actionIcon, {color: tintColor}]}/>
 };
 
 CategoriesWrapper.navigationOptions = {
-    tabBarIcon: ({tintColor}) => <Ion name="md-planet" style={styles.actionIcon}/>
+    tabBarIcon: ({tintColor}) => <Ion name="md-planet" style={[styles.actionIcon, {color: tintColor}]}/>
 };
 
-export default WHScreen = TabNavigator(
+const MainTabs = TabNavigator(
     {
         'My Events': {
             screen: MyEventsWrapper,
@@ -35,8 +35,12 @@ export default WHScreen = TabNavigator(
         tabBarPosition: 'bottom',
         tabBarOptions: {
             showIcon: true,
-            showLabel: true
+            showLabel: true,
+            activeTintColor: '#127ac0',
+            style: styles.tabBar,
         },
         swipeEnabled: false
     }
 );
+
+export default WHScreen = () => <MainTabs/>;

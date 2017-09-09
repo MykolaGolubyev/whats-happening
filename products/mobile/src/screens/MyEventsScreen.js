@@ -25,7 +25,7 @@ const Event = ({ eventName }) => {
     return (
         <Swipeout left={swipeOutButtonsLeft} right={swipeOutButtonsRight}>
             <View style={styles.swipeout}>
-                <Text>{eventName}</Text>
+                <Text style={styles.cname}>{eventName}</Text>
             </View>
         </Swipeout>
     );
@@ -34,7 +34,7 @@ const Event = ({ eventName }) => {
 export default class MyEventsScreen extends PureComponent {
     render() {
         return (
-            <View style={[styles.eventsContainer]}>
+            <View style={styles.eventsContainer}>
                 <FlatList
                     data={this.props.events}
                     renderItem={({item}) => <Event eventName={item.name}/>}

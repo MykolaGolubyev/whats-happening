@@ -1,15 +1,21 @@
 import React, {Component} from 'react';
-import {AppRegistry, StatusBar} from 'react-native';
+import {AppRegistry, StatusBar, View} from 'react-native';
 
 import HomeScreen from './src/screens/WHScreen';
+import styles from './src/styles/WHStyle';
 
 export default class WhatsHappeningMobile extends Component {
     componentDidMount() {
-        StatusBar.setBarStyle('dark-content', true);
+        StatusBar.setBarStyle('light-content', true);
     }
 
     render() {
-        return <HomeScreen/>;
+        return (
+            <View style={styles.container}>
+                <StatusBar/>
+                <HomeScreen/>
+            </View>
+        );
     }
 }
 

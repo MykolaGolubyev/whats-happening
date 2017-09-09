@@ -3,12 +3,14 @@ import {Dimensions, StyleSheet} from "react-native";
 export default styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        backgroundColor: '#272a2c',
+        paddingTop: 26
     },
     categoriesContainer: {
         flexDirection: 'column'
+    },
+    eventsContainer: {
+        flexDirection: 'column',
     },
     categoriesRow: {
         flexDirection: 'row',
@@ -31,19 +33,16 @@ export default styles = StyleSheet.create({
         justifyContent: 'space-between',
         margin: 5
     },
-    eventsContainer: {
-        flex: 1,
-        marginTop: 26,
-    },
     swipeout: {
-        backgroundColor: '#FFF',
+        backgroundColor: '#272a2c',
         paddingTop: 8,
         paddingBottom: 8,
         paddingLeft: 20,
         paddingRight: 20,
     },
-    cname: {flex: 1, fontSize: 15, fontWeight: 'bold', fontStyle: 'italic', color: '#000'},
-    description: {flex: 2, textAlign: 'left', fontSize: 10, fontStyle: 'italic', color: '#000'},
-    subcount: {flex: 1, textAlign: 'right', fontSize: 10, fontStyle: 'italic', color: '#00b'},
-    actionIcon: {fontSize: 26, height: 26}
+    cname: {flex: 1, fontSize: 15, fontWeight: 'bold', fontStyle: 'italic', color: '#676767'},
+    description: {flex: 2, textAlign: 'left', fontSize: 10, fontStyle: 'italic', color: '#dfdfdf'},
+    subcount: {flex: 1, textAlign: 'right', fontSize: 10, fontStyle: 'italic', color: '#bbbb2f'},
+    actionIcon: {fontSize: 26, height: 26, color: '#ccc'},
+    tabBar: {backgroundColor: '#000'}
 });

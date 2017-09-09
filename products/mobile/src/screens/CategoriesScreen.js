@@ -19,7 +19,7 @@ export default class CategoriesScreen extends PureComponent {
     render() {
         let categoryCards = this.props.categories.map(c => <CategoryCard key={c.name} category={c}/>);
         return (
-            <View style={[styles.container, styles.categoriesContainer]}>
+            <View style={styles.categoriesContainer}>
                 <View style={styles.categoriesRow}>
                     {categoryCards}
                 </View>
