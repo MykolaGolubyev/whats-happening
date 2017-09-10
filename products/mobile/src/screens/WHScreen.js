@@ -7,12 +7,19 @@ import CategoriesScreen from "./CategoriesScreen";
 import data from '../../data.json';
 import styles from '../styles/WHStyle';
 
-const MyEventsWrapper = function () {
+const MyEventsWrapper = function (props) {
+    console.log(JSON.stringify(props));
     return <MyEventsScreen events={data.events}/>
 };
 
-const CategoriesWrapper = function () {
-    return <CategoriesScreen categories={data.categories}/>
+const CategoriesWrapper = function (props) {
+    console.log(JSON.stringify(props));
+
+    const categoryClicked = (category) => {
+        console.log("Category", category, "was selected");
+    };
+
+    return <CategoriesScreen categories={data.categories} categoryPicked={categoryClicked}/>
 };
 
 MyEventsWrapper.navigationOptions = {
