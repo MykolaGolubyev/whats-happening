@@ -8,15 +8,17 @@ import data from '../../data.json';
 import styles from '../styles/WHStyle';
 
 const MyEventsWrapper = function (props) {
-    console.log(JSON.stringify(props));
-    return <MyEventsScreen events={data.events}/>
+    const {params} = props.navigation.state;
+    const eventCategory = params ? params.category : null;
+    let events = data.events.filter(e => !eventCategory || e.category === eventCategory);
+    return <MyEventsScreen events={events}/>
 };
 
 const CategoriesWrapper = function (props) {
-    console.log(JSON.stringify(props));
-
+    const {navigate} = props.navigation;
     const categoryClicked = (category) => {
-        console.log("Category", category, "was selected");
+        console.debug("Category", category, "was selected");
+        navigate('My Events', {category: category});
     };
 
     return <CategoriesScreen categories={data.categories} categoryPicked={categoryClicked}/>
