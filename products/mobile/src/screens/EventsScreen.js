@@ -31,7 +31,7 @@ const Event = ({ eventName }) => {
     );
 };
 
-export default class MyEventsScreen extends PureComponent {
+export default class EventsScreen extends PureComponent {
     render() {
         return (
             <View style={styles.eventsContainer}>

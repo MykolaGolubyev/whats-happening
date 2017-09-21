@@ -2,7 +2,7 @@ import React from 'react';
 import {TabNavigator} from "react-navigation";
 import Ion from "react-native-vector-icons/Ionicons";
 
-import MyEventsScreen from './MyEventsScreen';
+import EventsScreen from './EventsScreen';
 import CategoriesScreen from "./CategoriesScreen";
 import data from '../../data.json';
 import styles from '../styles/WHStyle';
@@ -11,7 +11,7 @@ const MyEventsWrapper = function (props) {
     const {params} = props.navigation.state;
     const eventCategory = params ? params.category : null;
     let events = data.events.filter(e => !eventCategory || e.category === eventCategory);
-    return <MyEventsScreen events={events}/>
+    return <EventsScreen events={events}/>
 };
 
 const CategoriesWrapper = function (props) {
