@@ -14,8 +14,8 @@
     "immutable": "^3.8.1",
     "jest": "^21.0.2",
     "lodash": "^4.17.4",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^16.0.0-rc.3",
+    "react-dom": "^16.0.0-rc.3",
     "ts-jest": "^21.0.0"
   },
   "devDependencies": {

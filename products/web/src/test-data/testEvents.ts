@@ -1,7 +1,8 @@
 import { EventInfo } from '../events/EventInfo';
+import { addDays } from 'date-fns';
 
-const tomorrow = new Date(2017, 8, 9);
-const aWeekFromNow = new Date(2017, 8, 9 + 7);
+const tomorrow = addDays(new Date(), 1);
+const aWeekFromNow = addDays(new Date(), 7);
 
 const sampleData: EventInfo[] = [
   {

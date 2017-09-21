@@ -5851,6 +5851,15 @@ react-dom@^15.6.1:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
+react-dom@^16.0.0-rc.3:
+  version "16.0.0-rc.3"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.0.0-rc.3.tgz#bd4e4d2abd464df5149a062b45fe796bbb804c2c"
+  dependencies:
+    fbjs "^0.8.9"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+    prop-types "^15.5.6"
+
 react-error-overlay@^1.0.8:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-1.0.10.tgz#da8cd1eafac41afdca2a33792b23694ef6c528f1"
@@ -6112,6 +6121,15 @@ react@^15.6.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
     prop-types "^15.5.10"
+
+react@^16.0.0-rc.3:
+  version "16.0.0-rc.3"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.0.0-rc.3.tgz#4a9df996326ba7185903d9fbed3149765e237e26"
+  dependencies:
+    fbjs "^0.8.9"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+    prop-types "^15.5.6"
 
 read-all-stream@^3.0.0:
   version "3.1.0"
