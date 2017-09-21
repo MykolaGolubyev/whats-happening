@@ -1,0 +1,10 @@
+.events-group  {
+}
+
+.events-group .content {
+    display: flex;
+    flex-wrap: wrap;
+
+    border-radius: 5px;
+    margin: 3px 80px 0 80px;
+}

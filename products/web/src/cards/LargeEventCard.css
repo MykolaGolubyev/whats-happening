@@ -1,0 +1,38 @@
+.large-event-card {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid var(--color-heavy);
+    background-color: white;
+    border-radius: 3px;
+    max-height: 100px;
+
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas:
+            "a a b"
+            "c c c"
+            "d d d";
+}
+
+.large-event-card .name {
+    grid-area: a;
+}
+
+.large-event-card .category {
+    grid-area: b;
+    text-transform: uppercase;
+    color: lightslategray;
+    text-align: right;
+
+}
+
+.large-event-card .date {
+    grid-area: c;
+    color: lightslategray;
+    text-align: right;
+}
+
+.large-event-card .description {
+    grid-area: d;
+}

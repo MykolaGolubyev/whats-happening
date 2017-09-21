@@ -1,6 +1,7 @@
-.event-card {
+.small-event-card {
+    flex: 0 0 320px;
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
     border: 1px solid var(--color-heavy);
     background-color: white;
     border-radius: 3px;
@@ -10,29 +11,33 @@
     overflow: hidden;
     grid-template-columns: repeat(3,1fr);
     grid-template-areas:
-      "a a b"
-      "c c c"
-      "d d d";
+            "a a b"
+            "c c c"
+            "d d d";
 }
 
-.event-card .name {
+.small-event-card .name {
     grid-area: a;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.event-card .category {
+.small-event-card .category {
     grid-area: b;
+    font-size: 12px;
     text-transform: uppercase;
     color: lightslategray;
     text-align: right;
-
 }
 
-.event-card .date {
+.small-event-card .date {
     grid-area: c;
+    font-size: 12px;
     color: lightslategray;
     text-align: right;
 }
 
-.event-card .description {
+.small-event-card .description {
+    font-size: 14px;
     grid-area: d;
 }

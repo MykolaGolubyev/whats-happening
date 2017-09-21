@@ -1,0 +1,16 @@
+.events-group-title-panel {
+    display: flex;
+}
+
+.events-group-title-panel .dashes {
+    flex: 1;
+    border-bottom: 1px dashed #888;
+    margin-bottom: 20px;
+}
+
+.events-group-title-panel .title {
+    flex: 0;
+    white-space: nowrap;
+    margin: 25px 20px 5px 20px;
+    font-size: 22px;
+}
