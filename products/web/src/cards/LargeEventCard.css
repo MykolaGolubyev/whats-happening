@@ -1,10 +1,12 @@
 .large-event-card {
+    flex: 0 0 680px;
     margin: 5px;
     padding: 5px;
     border: 1px solid var(--color-heavy);
     background-color: white;
     border-radius: 3px;
-    max-height: 100px;
+    min-height: 300px;
+    max-height: 300px;
 
     display: grid;
     overflow: hidden;

@@ -1,4 +1,5 @@
 export interface EventInfo {
+  id: string;
   name: string;
   category: string;
   date: Date;
