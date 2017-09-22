@@ -7,7 +7,7 @@ import CategoriesScreen from "./CategoriesScreen";
 import data from '../../data.json';
 import styles from '../styles/WHStyle';
 
-const MyEventsWrapper = function (props) {
+const EventsWrapper = function (props) {
     const {params} = props.navigation.state;
     const eventCategory = params ? params.category : null;
     let events = data.events.filter(e => !eventCategory || e.category === eventCategory);
@@ -18,13 +18,13 @@ const CategoriesWrapper = function (props) {
     const {navigate} = props.navigation;
     const categoryClicked = (category) => {
         console.debug("Category", category, "was selected");
-        navigate('My Events', {category: category});
+        navigate('Events', {category: category});
     };
 
     return <CategoriesScreen categories={data.categories} categoryPicked={categoryClicked}/>
 };
 
-MyEventsWrapper.navigationOptions = {
+EventsWrapper.navigationOptions = {
     tabBarIcon: ({tintColor}) => <Ion name="ios-calendar-outline" style={[styles.actionIcon, {color: tintColor}]}/>
 };
 
@@ -34,8 +34,8 @@ CategoriesWrapper.navigationOptions = {
 
 const MainTabs = TabNavigator(
     {
-        'My Events': {
-            screen: MyEventsWrapper,
+        'Events': {
+            screen: EventsWrapper,
         },
         'Browse': {
             screen: CategoriesWrapper,
