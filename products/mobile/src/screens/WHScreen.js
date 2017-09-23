@@ -24,21 +24,27 @@ const CategoriesWrapper = function (props) {
     return <CategoriesScreen categories={data.categories} categoryPicked={categoryClicked}/>
 };
 
-EventsWrapper.navigationOptions = {
-    tabBarIcon: ({tintColor}) => <Ion name="ios-calendar-outline" style={[styles.actionIcon, {color: tintColor}]}/>
-};
-
-CategoriesWrapper.navigationOptions = {
-    tabBarIcon: ({tintColor}) => <Ion name="md-planet" style={[styles.actionIcon, {color: tintColor}]}/>
-};
-
 const MainTabs = TabNavigator(
     {
         'Events': {
             screen: EventsWrapper,
+            navigationOptions: ({navigation}) => ({
+                title: "Events",
+                tabBarIcon: ({tintColor}) => <Ion name="ios-calendar-outline"
+                                                  style={[styles.actionIcon, {color: tintColor}]}/>,
+                tabBarOnPress: (scene, jumpToIndex) => {
+                    console.log('onPress:', scene.route);
+                    jumpToIndex(scene.index);
+                }
+            }),
+
         },
         'Browse': {
             screen: CategoriesWrapper,
+            navigationOptions: ({navigation}) => ({
+                title: "Categories",
+                tabBarIcon: ({tintColor}) => <Ion name="md-planet" style={[styles.actionIcon, {color: tintColor}]}/>
+            }),
         },
     }, {
         tabBarPosition: 'bottom',
