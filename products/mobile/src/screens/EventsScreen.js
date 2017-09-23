@@ -1,33 +1,14 @@
 import React, {PureComponent} from 'react';
 import {View, Text, FlatList} from "react-native";
-import Swipeout from 'react-native-swipe-out';
 import styles from '../styles/WHStyle';
 
-const swipeOutButtonsLeft = [
-    {
-        text:'Accept',
-        backgroundColor:'green',
-        type:'default',
-        component: <Text>Accept</Text>
-    }
-];
-
-const swipeOutButtonsRight = [
-    {
-        text:'Cancel',
-        backgroundColor:'red',
-        type:'default',
-        component: <Text>Cancel</Text>
-    }
-];
-
-const Event = ({ eventName }) => {
+const Event = ({event}) => {
     return (
-        <Swipeout left={swipeOutButtonsLeft} right={swipeOutButtonsRight}>
-            <View style={styles.swipeout}>
-                <Text style={styles.cname}>{eventName}</Text>
-            </View>
-        </Swipeout>
+        <View style={styles.event}>
+            <Text style={styles.cname}>{event.name}</Text>
+            <Text style={styles.subcount}>{event.date}</Text>
+            <Text style={styles.description}>{event.description}</Text>
+        </View>
     );
 };
 
@@ -37,7 +18,7 @@ export default class EventsScreen extends PureComponent {
             <View style={styles.eventsContainer}>
                 <FlatList
                     data={this.props.events}
-                    renderItem={({item}) => <Event eventName={item.name}/>}
+                    renderItem={({item: event}) => <Event event={event}/>}
                     keyExtractor={item => item.name}
                 />
             </View>

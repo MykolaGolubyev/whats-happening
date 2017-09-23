@@ -32,8 +32,7 @@ export default WHStyle = StyleSheet.create({
         justifyContent: 'space-between',
         margin: 5
     },
-    swipeout: {
-        backgroundColor: '#272a2c',
+    event: {
         paddingTop: 8,
         paddingBottom: 8,
         paddingLeft: 20,

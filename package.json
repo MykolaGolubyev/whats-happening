@@ -2,9 +2,11 @@
   "private": true,
   "name": "WhatsHappening",
   "version": "0.0.1",
-  "dependencies": {
-  },
+  "dependencies": {},
   "workspaces": [
     "products/*"
-  ]
+  ],
+  "devDependencies": {
+    "prettier": "^1.7.0"
+  }
 }
