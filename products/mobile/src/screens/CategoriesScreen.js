@@ -1,30 +1,29 @@
 import React, {PureComponent} from 'react';
-import {Text, View, ScrollView, TouchableOpacity} from 'react-native';
-import {Card} from 'react-native-elements';
+import {FlatList, ScrollView, Text, TouchableOpacity, View} from 'react-native';
+import {sortBy} from 'lodash';
+
+import Card from '../components/Card';
 import styles from '../styles/WHStyle';
 
 const CategoryCard = (props) => {
     const {name, description, subcount} = props.category;
     return (
         <TouchableOpacity onPress={() => props.categoryPicked(name)}>
-            <Card title={name} containerStyle={styles.categoryCard} titleStyle={styles.cname}>
-                <Text style={styles.description}>{description}</Text>
-                <Text style={styles.subcount}>{`${subcount} members`}</Text>
-            </Card>
+            <Card title={name} description={description} detail={subcount}/>
         </TouchableOpacity>
     )
 };
 
 export default class CategoriesScreen extends PureComponent {
     render() {
-        let categoryCards = this.props.categories.map(c => <CategoryCard key={c.name}
-                                                                         category={c}
-                                                                         categoryPicked={this.props.categoryPicked}/>);
+        const categories = sortBy(this.props.categories, c => c.name);
         return (
             <ScrollView style={[styles.categoriesContainer]}>
-                <View style={styles.categoriesRow}>
-                    {categoryCards}
-                </View>
+                <FlatList
+                    data={categories}
+                    renderItem={({item: c}) => <CategoryCard category={c}
+                                                             categoryPicked={this.props.categoryPicked}/>}
+                    keyExtractor={c => c.name}/>
             </ScrollView>
         );
     }

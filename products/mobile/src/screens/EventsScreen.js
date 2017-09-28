@@ -1,15 +1,10 @@
 import React, {PureComponent} from 'react';
-import {View, Text, FlatList} from "react-native";
+import {FlatList, View} from "react-native";
 import styles from '../styles/WHStyle';
+import Card from '../components/Card';
 
 const Event = ({event}) => {
-    return (
-        <View style={styles.event}>
-            <Text style={styles.cname}>{event.name}</Text>
-            <Text style={styles.subcount}>{event.date}</Text>
-            <Text style={styles.description}>{event.description}</Text>
-        </View>
-    );
+    return <Card title={event.name} description={event.description} detail={event.date}/>
 };
 
 export default class EventsScreen extends PureComponent {

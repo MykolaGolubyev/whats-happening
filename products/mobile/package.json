@@ -8,6 +8,7 @@
 	},
 	"dependencies": {
 		"date-fns": "^1.28.5",
+		"lodash": "^4.17.4",
 		"react": "^16.0.0",
 		"react-native": "0.48.4",
 		"react-native-elements": "^0.16.0",

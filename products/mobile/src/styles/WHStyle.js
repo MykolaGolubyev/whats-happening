@@ -1,4 +1,4 @@
-import {Dimensions, StyleSheet} from "react-native";
+import {StyleSheet} from "react-native";
 
 export default WHStyle = StyleSheet.create({
     container: {
@@ -22,9 +22,7 @@ export default WHStyle = StyleSheet.create({
     categoryCard: {
         borderRadius: 8,
         borderColor: '#c0c0c0',
-        borderWidth: 1,
-        height: 100,
-        width: Dimensions.get('window').width / 3
+        borderWidth: 1
     },
     categoryDescription: {
         flex: 1,
@@ -37,10 +35,12 @@ export default WHStyle = StyleSheet.create({
         paddingBottom: 8,
         paddingLeft: 20,
         paddingRight: 20,
+        marginBottom: 2,
+        backgroundColor: '#272a2c'
     },
-    cname: {fontSize: 15, fontWeight: 'bold', fontStyle: 'italic', color: '#676767'},
-    description: {textAlign: 'left', fontSize: 10, fontStyle: 'italic', color: '#8f95af'},
-    subcount: {textAlign: 'right', fontSize: 10, fontStyle: 'italic', color: '#bbbb2f'},
+    cname: {fontSize: 15, fontWeight: 'bold', color: '#676767'},
+    description: {textAlign: 'left', fontSize: 10, color: '#8f95af'},
+    subcount: {textAlign: 'right', fontSize: 10, color: '#bbbb2f'},
     actionIcon: {fontSize: 26, height: 26, color: '#ccc'},
     tabBar: {backgroundColor: '#000'}
 });
