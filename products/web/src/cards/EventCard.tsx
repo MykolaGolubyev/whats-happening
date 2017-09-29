@@ -2,14 +2,14 @@ import * as React from 'react';
 
 import { EventInfo } from '../events/EventInfo';
 import { SmallEventCard } from './SmallEventCard';
-import { LargeEventCard } from './LargeEventCard';
-import { EventSelectionCallback } from './EventSelection';
+import { CardCallbacks } from './CardCallbacks';
 
-interface CardProps extends EventInfo, EventSelectionCallback {
+interface CardProps {
+  event: EventInfo;
   isExpanded: boolean;
+  cardCallbacks: CardCallbacks;
 }
 
-export const EventCard = ({isExpanded, onEventSelection, ...event}: CardProps) => {
-  return isExpanded ? <LargeEventCard event={event}/> :
-    <SmallEventCard event={event} onEventSelection={onEventSelection}/>;
+export const EventCard = ({event, isExpanded, cardCallbacks}: CardProps) => {
+  return <SmallEventCard event={event} cardCallbacks={cardCallbacks}/>;
 };

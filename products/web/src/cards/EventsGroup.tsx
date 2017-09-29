@@ -5,23 +5,24 @@ import { EventCard } from './EventCard';
 import { EventsGroupTitle } from './EventsGroupTitle';
 
 import './EventsGroup.css';
-import { EventSelectionCallback } from './EventSelection';
+import { CardCallbacks } from './CardCallbacks';
 
-interface GroupProps extends EventSelectionCallback {
+interface GroupProps {
   title: string;
   events: EventInfo[];
   selectedCardId: string;
+  cardCallbacks: CardCallbacks;
 }
 
-export const EventsGroup = ({title, events, onEventSelection, selectedCardId}: GroupProps) => (
+export const EventsGroup = ({title, events, cardCallbacks, selectedCardId}: GroupProps) => (
   <div className="events-group">
     <EventsGroupTitle title={title}/>
     <div className="content">
       {events.map(event => <EventCard
         key={event.id}
-        {...event}
+        event={event}
         isExpanded={event.id === selectedCardId}
-        onEventSelection={onEventSelection}
+        cardCallbacks={cardCallbacks}
       />)}
     </div>
   </div>

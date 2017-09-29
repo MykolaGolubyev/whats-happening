@@ -4,4 +4,6 @@ export interface EventInfo {
   category: string;
   date: Date;
   description: string;
+  going: number;
+  interested: number;
 }

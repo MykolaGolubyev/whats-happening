@@ -10,6 +10,7 @@ import { CalendarEvents } from '../events/CalendarEvents';
 import { NavigationFilter } from './navigation/NavigationFilter';
 import { RealTimeDateProvider } from '../events/RealTimeDateProvider';
 import { EventInfo } from '../events/EventInfo';
+import { CardCallbacks } from '../cards/CardCallbacks';
 
 interface Props {
 }
@@ -21,6 +22,8 @@ interface State {
 }
 
 export class DiscoveryScreen extends React.Component<Props, State> {
+  cardCallbacks: CardCallbacks;
+
   constructor(props: Props) {
     super(props);
 
@@ -28,6 +31,13 @@ export class DiscoveryScreen extends React.Component<Props, State> {
       allEvents: new CalendarEvents(sampleData, new RealTimeDateProvider()),
       navigationFilter: new NavigationFilter(Immutable.Set.of(), ''),
       selectedId: ''
+    };
+
+    this.cardCallbacks = {
+      onSelect: this.onEventSelection,
+      onInterested: this.onEventInterested,
+      onVote: this.onEventVote,
+      onGoing: this.onEventYes
     };
   }
 
@@ -40,7 +50,7 @@ export class DiscoveryScreen extends React.Component<Props, State> {
         <CorkBoard
           events={allEvents.filter(navigationFilter)}
           selectedCardId={selectedId}
-          onEventSelection={this.onEventSelection}
+          cardCallbacks={this.cardCallbacks}
         />
       </div>
     );
@@ -52,5 +62,17 @@ export class DiscoveryScreen extends React.Component<Props, State> {
 
   onEventSelection = (event: EventInfo) => {
     this.setState({selectedId: event.id});
+  }
+
+  onEventVote = (event: EventInfo) => {
+    //
+  }
+
+  onEventYes = (event: EventInfo) => {
+    //
+  }
+
+  onEventInterested = (event: EventInfo) => {
+    //
   }
 }

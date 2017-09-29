@@ -2,21 +2,22 @@ import * as React from 'react';
 import './CorkBoard.css';
 import { CalendarEvents } from '../events/CalendarEvents';
 import { EventsGroup } from './EventsGroup';
-import { EventSelectionCallback } from './EventSelection';
+import { CardCallbacks } from './CardCallbacks';
 
-interface CorkBoardProps extends EventSelectionCallback {
+interface CorkBoardProps {
+  cardCallbacks: CardCallbacks;
   events: CalendarEvents;
   selectedCardId: string;
 }
 
-export const CorkBoard = ({events, selectedCardId, onEventSelection}: CorkBoardProps) => (
+export const CorkBoard = ({events, selectedCardId, cardCallbacks}: CorkBoardProps) => (
   <div className="cork-board">
     {events.groups.map(group => <EventsGroup
       key={group.name}
       title={group.name}
       events={group.events}
       selectedCardId={selectedCardId}
-      onEventSelection={onEventSelection}
+      cardCallbacks={cardCallbacks}
     />)}
   </div>
 );
