@@ -7,16 +7,16 @@ import { CardCallbacks } from './CardCallbacks';
 interface CorkBoardProps {
   cardCallbacks: CardCallbacks;
   events: CalendarEvents;
-  selectedCardId: string;
+  hoveredCardId: string;
 }
 
-export const CorkBoard = ({events, selectedCardId, cardCallbacks}: CorkBoardProps) => (
+export const CorkBoard = ({events, hoveredCardId, cardCallbacks}: CorkBoardProps) => (
   <div className="cork-board">
     {events.groups.map(group => <EventsGroup
       key={group.name}
       title={group.name}
       events={group.events}
-      selectedCardId={selectedCardId}
+      hoveredCardId={hoveredCardId}
       cardCallbacks={cardCallbacks}
     />)}
   </div>

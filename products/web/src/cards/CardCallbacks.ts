@@ -5,4 +5,6 @@ export interface CardCallbacks {
   onGoing: (event: EventInfo) => void;
   onInterested: (event: EventInfo) => void;
   onVote: (event: EventInfo) => void;
+  onMouseOver: (event: EventInfo) => void;
+  onMouseLeave: (event: EventInfo) => void;
 }

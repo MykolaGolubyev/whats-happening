@@ -10,18 +10,18 @@ import { CardCallbacks } from './CardCallbacks';
 interface GroupProps {
   title: string;
   events: EventInfo[];
-  selectedCardId: string;
+  hoveredCardId: string;
   cardCallbacks: CardCallbacks;
 }
 
-export const EventsGroup = ({title, events, cardCallbacks, selectedCardId}: GroupProps) => (
+export const EventsGroup = ({title, events, cardCallbacks, hoveredCardId}: GroupProps) => (
   <div className="events-group">
     <EventsGroupTitle title={title}/>
     <div className="content">
       {events.map(event => <EventCard
         key={event.id}
         event={event}
-        isExpanded={event.id === selectedCardId}
+        isHovered={event.id === hoveredCardId}
         cardCallbacks={cardCallbacks}
       />)}
     </div>

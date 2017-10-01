@@ -5,7 +5,8 @@
     border: 1px solid var(--color-heavy);
     background-color: white;
     border-radius: 3px;
-    min-height: 100px;
+    min-height: 110px;
+    max-height: 110px;
 
     display: grid;
     overflow: hidden;
@@ -14,7 +15,7 @@
             "a a b"
             "c c c"
             "d d d"
-            "s x e"
+            "x x x"
 }
 
 .small-event-card:hover {
@@ -48,8 +49,13 @@
     grid-area: d;
 }
 
+.small-event-card .actions-and-stats {
+    grid-area: x;
+    display: flex;
+    justify-content: space-between;
+}
+
 .small-event-card .buttons {
-    grid-area: e;
     display: flex;
     justify-content: flex-end;
 }
@@ -73,7 +79,6 @@
 }
 
 .small-event-card .stats {
-    grid-area: s;
     display: flex;
     justify-content: flex-start;
 }

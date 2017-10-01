@@ -6,10 +6,10 @@ import { CardCallbacks } from './CardCallbacks';
 
 interface CardProps {
   event: EventInfo;
-  isExpanded: boolean;
+  isHovered: boolean;
   cardCallbacks: CardCallbacks;
 }
 
-export const EventCard = ({event, isExpanded, cardCallbacks}: CardProps) => {
-  return <SmallEventCard event={event} cardCallbacks={cardCallbacks}/>;
+export const EventCard = ({event, isHovered, cardCallbacks}: CardProps) => {
+  return <SmallEventCard event={event} isHovered={isHovered} cardCallbacks={cardCallbacks}/>;
 };

@@ -19,6 +19,7 @@ interface State {
   allEvents: CalendarEvents;
   navigationFilter: NavigationFilter;
   selectedId: string;
+  hoveredId: string;
 }
 
 export class DiscoveryScreen extends React.Component<Props, State> {
@@ -30,10 +31,13 @@ export class DiscoveryScreen extends React.Component<Props, State> {
     this.state = {
       allEvents: new CalendarEvents(sampleData, new RealTimeDateProvider()),
       navigationFilter: new NavigationFilter(Immutable.Set.of(), ''),
-      selectedId: ''
+      selectedId: '',
+      hoveredId: ''
     };
 
     this.cardCallbacks = {
+      onMouseOver: this.onEventMouseOver,
+      onMouseLeave: this.onEventMouseLeave,
       onSelect: this.onEventSelection,
       onInterested: this.onEventInterested,
       onVote: this.onEventVote,
@@ -42,14 +46,14 @@ export class DiscoveryScreen extends React.Component<Props, State> {
   }
 
   render() {
-    const {allEvents, navigationFilter, selectedId} = this.state;
+    const {allEvents, navigationFilter, hoveredId} = this.state;
 
     return (
       <div className="discovery-screen">
         <NavigationPanel onFilterChange={this.onFilterChange} navigationFilter={navigationFilter}/>
         <CorkBoard
           events={allEvents.filter(navigationFilter)}
-          selectedCardId={selectedId}
+          hoveredCardId={hoveredId}
           cardCallbacks={this.cardCallbacks}
         />
       </div>
@@ -58,6 +62,14 @@ export class DiscoveryScreen extends React.Component<Props, State> {
 
   onFilterChange = (navigationFilter: NavigationFilter) => {
     this.setState({navigationFilter: navigationFilter});
+  }
+
+  onEventMouseOver = (event: EventInfo) => {
+    this.setState({hoveredId: event.id});
+  }
+
+  onEventMouseLeave = (event: EventInfo) => {
+    this.setState({hoveredId: ''});
   }
 
   onEventSelection = (event: EventInfo) => {
