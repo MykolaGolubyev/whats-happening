@@ -1,10 +1,20 @@
 import React, {PureComponent} from 'react';
-import {FlatList, ScrollView} from "react-native";
+import {FlatList, ScrollView, Text, View} from "react-native";
 import styles from '../styles/WHStyle';
 import Card from '../components/Card';
+import Ion from "react-native-vector-icons/Ionicons";
+
 
 const Event = ({event}) => {
-    return <Card title={event.name} description={event.description} detail={event.date}/>
+    return (
+        <View style={styles.eventContainer}>
+            <Card title={event.name} description={event.description} detail={event.date}/>
+            <View style={{display: 'flex', flexDirection: 'row', justifyContent:'space-between', paddingLeft:40, paddingRight:40}}>
+                <Ion name="md-checkmark-circle-outline" style={styles.optionIcons}/>
+                <Ion name="ios-checkmark-circle-outline" style={styles.optionIcons}/>
+            </View>
+        </View>
+    );
 };
 
 export default class EventsScreen extends PureComponent {

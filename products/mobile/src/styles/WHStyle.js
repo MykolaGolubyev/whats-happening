@@ -10,7 +10,12 @@ export default WHStyle = StyleSheet.create({
         flexDirection: 'column'
     },
     eventsContainer: {
-        flexDirection: 'column',
+        flexDirection: 'column'
+    },
+    eventContainer: {
+        borderBottomWidth: 1,
+        borderColor: '#888',
+        paddingBottom: 10
     },
     categoriesRow: {
         flexDirection: 'row',
@@ -42,5 +47,6 @@ export default WHStyle = StyleSheet.create({
     description: {textAlign: 'left', fontSize: 10, color: '#8f95af'},
     subcount: {textAlign: 'right', fontSize: 10, color: '#bbbb2f'},
     actionIcon: {fontSize: 26, height: 26, color: '#ccc'},
+    optionIcons: {fontSize: 20, height: 20, color: '#ccc'},
     tabBar: {backgroundColor: '#000'}
 });
