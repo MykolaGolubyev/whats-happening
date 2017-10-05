@@ -1,0 +1,17 @@
+.event-creation {
+    display: flex;
+    justify-content: space-around;
+}
+
+.event-creation .editing {
+    display: flex;
+}
+
+.event-creation .editing .essential-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-creation .preview {
+    display: flex;
+}

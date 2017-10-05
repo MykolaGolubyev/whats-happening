@@ -1,22 +1,15 @@
 import * as React from 'react';
 import './SmallEventCard.css';
 import { distanceInWords } from 'date-fns';
-import { EventInfo } from '../events/EventInfo';
-import { CardCallbacks } from './CardCallbacks';
+import { EventCardProps } from './EventCardProps';
 
-interface SmallEventCardProps {
-  event: EventInfo;
-  cardCallbacks: CardCallbacks;
-  isHovered: boolean;
-}
-
-export const SmallEventCard = ({event, cardCallbacks, isHovered}: SmallEventCardProps) => {
+export const SmallEventCard = ({event, cardCallbacks, isHovered}: EventCardProps) => {
   return (
     <div
       className="small-event-card"
-      onClick={() => cardCallbacks.onSelect(event)}
-      onMouseOver={() => cardCallbacks.onMouseOver(event)}
-      onMouseLeave={() => cardCallbacks.onMouseLeave(event)}
+      onClick={() => cardCallbacks && cardCallbacks.onSelect(event)}
+      onMouseOver={() =>  cardCallbacks && cardCallbacks.onMouseOver(event)}
+      onMouseLeave={() =>  cardCallbacks && cardCallbacks.onMouseLeave(event)}
     >
       <div className="name">{event.name}</div>
       <div className="category">{event.category}</div>
